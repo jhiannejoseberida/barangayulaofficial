@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* VVV - DESKTOP LAYOUT - VVV */
+
+.container {
+    /* border: solid 3px cyan; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+#navcheck {
+    display: none;
+}
+
+.navcheckbtn {
+    font-size: 50px;
+    color: white;
+    float: right;
+    line-height: 100px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.office-hours-div {
+    position: relative;
+    height: 30px;
+    overflow-x: hidden;
+    color: #fff;
+    background-color: #10a9df;
+    width: 100%;
+    
+
+    .office-hours-text {
+        position: absolute;
+        margin: 5px 0;
+        padding: 0;
+        width: max-content;
+        animation: my-animation 24s linear infinite;
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
+.top-navbar {
+    /* border: solid 3px grey; */
+    display: flex;
+    flex-direction: row;
+    background: #0082e6;
+    justify-content: space-between;
+    height: 100px;
+
+    .navbar-logo {
+        line-height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        padding: 100px;
+
+        .navbar-logo-img {
+            height: 90px;
+        }
+    }
+
+    .navbar-btns{
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        list-style-type: none;
+        margin-right: 20px;
+        
+        .navbar-li {
+            margin: 0 5px;
+
+            .navbar-btn {
+                color: white;
+                font-family: 'Montserrat';
+                font-size: 17px;
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 7px 13px;
+                border-radius: 5px;
+            }
+            
+            .navbar-btn.active {
+                background: #1b9bff;
+                transition: .5s;
+            }
+
+        }
+    }
+
+}
+
+.home-page-bg {
+    background-image: url(img_home.jpg);
+    position: absolute;
+    top: 30;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    filter: contrast(25%) brightness(50%);
+}
+
+.home-page-container-row {
+    display: flex;
+    flex-direction: row;
+    height: 665px;
+    padding: 0 50px 0 50px;
+
+    .home-page-container-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+        margin-right: auto;
+        margin-left: auto;
+        width: 600px;
+
+        .home-page-logo {
+            height: 250px;
+            width: 250px;
+            padding-left: 50px;
+            margin-top: 75px;
+        }
+
+        .home-page-title {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            font-size: 60px;
+            font-weight: 500;
+            letter-spacing: -0.3px;
+            margin-bottom: 25px;
+        }
+
+        .home-page-subtitle {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        .home-learn-more {
+            background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
+            padding: 20px 50px 20px 50px;
+            color: #fff;
+            border-radius: 5px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3 ease;
+            position: relative;
+            display: inline-block;
+            outline: none;
+            border: none;
+            box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+            7px 7px 20px 0px rgba(0,0,0,.1),
+            4px 4px 5px 0px rgba(0,0,0,.1);
+            transition: all 0.3s ease-out 0s;
+            margin-bottom: 70px;
+        }
+
+        .home-learn-more:hover {
+            background: whitesmoke;
+            box-shadow: inset 2px 2px 2px 0px rgba(2,126,251,1),
+            7px 7px 20px 0px rgba(2,126,251,1),
+            4px 4px 5px 0px rgba(2,126,251,1);
+            color: rgba(2,126,251,1);
+        }
+
+    }
+
+    .home-page-container-kap {
+        align-content: flex-end;
+
+        .home-page-kap {
+            width: 90%;
+            max-height: 700px;
+        }
+    }
+}
+
+.footing-details-container {
+    background: #262728;
+    color: #b8bcc0;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+
+    .footing-details-container-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .footing-details-container-logo-column {
+            padding-left: 100px;
+        }
+
+        .footing-details-logo-img {
+            height: 150px;
+            width: 150px;
+            margin: 0 90px 0 90px;
+        }
+        
+        .footing-details-logo-desc {
+            margin-bottom: 50px;
+            max-width: 330px;
+        }
+
+        .footing-details-container-contact-column {
+            padding-right: 100px;
+
+            .footing-details-contact-header {
+                color: #fff;
+                margin-bottom: 20px;
+            }
+
+            .footing-details-contact-details {
+                font-size: 20px;
+                max-width: 397px;
+
+                .contact-img {
+                    filter: invert(80%);
+                }
+            }
+            
+        }
+        
+    }
+}
+
+.footing-copyrights-container {
+    padding: 25px 50px 25px 50px;
+    background: #191B1B;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #b8bcc0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+@media (max-width: 1353px) {
+    .home-page-kap {
+        z-index: -1;
+        min-width: 629px;
+    }
+
+    .home-page-bg {
+        top: 30;
+    }
+}
+
+@media (max-width: 1078px) {
+    .home-page-container-kap {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+    }
+
+}
+
+/* ^^^ - DESKTOP LAYOUT - ^^^ */
+
+/*                          */
+/* COPYRIGHTS BRGY ULA 2024 */
+/*       DEVELOPED BY       */
+/*  JHIANNE JOSE C. BERIDA  */
+/*                          */
+
+/* VVV - TABLET LAYOUT - VVV */
+
+@media (max-width: 1027px) {
+    html {
+        max-width: 1027px;
+    }
+    
+    .footing-details-container .footing-details-container-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .footing-details-container-contact-column {
+            padding-left: 100px;
+        }
+    }
+
+    .footing-details-container {
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 770px) {
+    html {
+        max-width: 770px;
+    }
+
+    .home-page-kap {
+        visibility: hidden;
+    }
+
+    .footing-details-container {
+        padding: 50px 0 50px 0;
+    }
+
+    .navcheckbtn {
+        display: block;
+    }
+
+    .navbar-btns {
+        flex-direction: column !important;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: #2c3e50;
+        top: 130px;
+        left: -110%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 1;
+    }
+
+    .navbar-li {
+        margin: 50px 0 !important;
+        line-height: 30px;
+    }
+
+    .navbar-btn:hover, .navbar-btn.active {
+        background: none !important;
+        color: #0082e6 !important;
+    }
+
+    #navcheck:checked ~ .navbar-btns {
+        left: 0;
+    }
+
+}
+
+/* ^^^ - TABLET LAYOUT - ^^^ */
+
+/*                          */
+/* COPYRIGHTS BRGY ULA 2024 */
+/*       DEVELOPED BY       */
+/*  JHIANNE JOSE C. BERIDA  */
+/*                          */
+
+/* VVV - MOBILE LAYOUT - VVV */
+
+@media (max-width: 480px) {
+    .home-page-container-row {
+        padding: 0 25px;
+    }
+
+    .home-page-container-row .home-page-container-column .home-page-logo {
+        padding-left: 0;
+    }
+
+    .home-page-title {
+        margin-bottom: 0 !important;
+    }
+
+    .home-page-subtitle {
+        visibility: collapse;
+        height: 0;
+        margin-bottom: 20px !important;
+    }
+
+    .footing-details-container-logo-column {
+        padding-left: 25px !important;
+    }
+
+    .footing-details-container-contact-column {
+        padding-left: 25px !important;
+    }
+}
+
+/* ^^^ - MOBILE LAYOUT - ^^^ */
